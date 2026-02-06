@@ -1,0 +1,47 @@
+# Kubernetes Services for Mansoori Todo Application
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: mansoori-todo
+spec:
+  selector:
+    app: backend
+  ports:
+  - protocol: TCP
+    port: 8888
+    targetPort: 8888
+  type: ClusterIP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mcp-service
+  namespace: mansoori-todo
+spec:
+  selector:
+    app: mcp-server
+  ports:
+  - protocol: TCP
+    port: 8000
+    targetPort: 8000
+  type: ClusterIP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  namespace: mansoori-todo
+spec:
+  selector:
+    app: frontend
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+    nodePort: 30080
+  type: LoadBalancer

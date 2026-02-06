@@ -1,0 +1,36 @@
+{{- if .Values.mcpServer.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.mcpServer.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "mansoori-todo.labels" . | nindent 4 }}
+    app: {{ .Values.mcpServer.name }}
+spec:
+  replicas: {{ .Values.mcpServer.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.mcpServer.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.mcpServer.name }}
+    spec:
+      containers:
+      - name: {{ .Values.mcpServer.name }}
+        image: "{{ .Values.mcpServer.image.repository }}:{{ .Values.mcpServer.image.tag }}"
+        imagePullPolicy: {{ .Values.mcpServer.image.pullPolicy }}
+        ports:
+        - containerPort: {{ .Values.mcpServer.service.port }}
+        env:
+        - name: BACKEND_URL
+          value: "http://backend-service:{{ .Values.backend.service.port }}"
+        - name: GROQ_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: todo-secrets
+              key: GROQ_API_KEY
+        resources:
+          {{- toYaml .Values.mcpServer.resources | nindent 10 }}
+{{- end }}

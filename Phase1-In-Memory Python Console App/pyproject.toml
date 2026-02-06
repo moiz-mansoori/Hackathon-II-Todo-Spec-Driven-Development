@@ -1,0 +1,29 @@
+[project]
+name = "todo-cli-phase1"
+version = "1.0.0"
+description = "Phase 1: In-Memory CLI Todo Application"
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "MIT"}
+authors = [
+    {name = "Todo Evolution Project"}
+]
+
+[project.scripts]
+todo = "src.cli.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+]

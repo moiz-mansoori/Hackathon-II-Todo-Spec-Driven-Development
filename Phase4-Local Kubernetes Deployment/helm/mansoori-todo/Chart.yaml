@@ -1,0 +1,21 @@
+apiVersion: v2
+name: mansoori-todo
+description: A Helm chart for Mansoori Todo Application - Full Stack with AI Chatbot
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+
+keywords:
+  - todo
+  - fastapi
+  - nextjs
+  - mcp
+  - ai-chatbot
+
+maintainers:
+  - name: Moiz Ahmed Mansoori
+    url: https://github.com/moiz-mansoori
+
+home: https://github.com/moiz-mansoori
+sources:
+  - https://github.com/moiz-mansoori

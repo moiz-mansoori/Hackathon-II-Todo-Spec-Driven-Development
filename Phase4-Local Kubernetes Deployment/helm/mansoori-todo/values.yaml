@@ -1,0 +1,89 @@
+# Default values for mansoori-todo Helm chart
+# This is a YAML-formatted file.
+
+# Global settings
+namespace: mansoori-todo
+
+# Backend (FastAPI) configuration
+backend:
+  enabled: true
+  name: backend
+  replicaCount: 1
+  image:
+    repository: mansoori-todo-backend
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 8888
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  livenessProbe:
+    path: /api/tasks
+    initialDelaySeconds: 15
+    periodSeconds: 20
+
+# MCP Server (AI Chatbot) configuration
+mcpServer:
+  enabled: true
+  name: mcp-server
+  replicaCount: 1
+  image:
+    repository: mansoori-todo-mcp
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 8000
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+# Frontend (Next.js) configuration
+frontend:
+  enabled: true
+  name: frontend
+  replicaCount: 1
+  image:
+    repository: mansoori-todo-frontend
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: LoadBalancer
+    port: 3000
+    nodePort: 30080
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  livenessProbe:
+    path: /
+    initialDelaySeconds: 30
+    periodSeconds: 20
+
+# Database configuration
+database:
+  # Use external Neon PostgreSQL
+  useNeon: true
+  neonUrl: "postgresql://user:password@ep-xxx.neon.tech/neondb?sslmode=require"
+  # Fallback SQLite with PVC
+  sqlite:
+    enabled: false
+    pvcSize: 1Gi
+
+# Secrets
+secrets:
+  jwtSecret: "dev-secret-change-in-production"
+  groqApiKey: "your-groq-api-key"

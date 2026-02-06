@@ -1,0 +1,108 @@
+# Kubernetes Deployments for Mansoori Todo Application
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: mansoori-todo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: mansoori-todo-backend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8888
+        env:
+        - name: DATABASE_URL
+          value: "sqlite:////data/todo.db"
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: todo-secrets
+              key: JWT_SECRET
+        volumeMounts:
+        - name: data
+          mountPath: /data
+        livenessProbe:
+          httpGet:
+            path: /api/tasks
+            port: 8888
+          initialDelaySeconds: 15
+          periodSeconds: 20
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: sqlite-pvc
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcp-server
+  namespace: mansoori-todo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mcp-server
+  template:
+    metadata:
+      labels:
+        app: mcp-server
+    spec:
+      containers:
+      - name: mcp-server
+        image: mansoori-todo-mcp:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+        env:
+        - name: BACKEND_URL
+          value: "http://backend-service:8888"
+        - name: GROQ_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: todo-secrets
+              key: GROQ_API_KEY
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: mansoori-todo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: mansoori-todo-frontend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NEXT_PUBLIC_API_URL
+          value: "http://backend-service:8888/api"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 20
