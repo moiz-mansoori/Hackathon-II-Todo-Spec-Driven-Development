@@ -85,7 +85,7 @@ python server.py
 The MCP server talks to the Phase 2 backend, so you need that running too:
 
 ```bash
-cd "../Phase2-Full-Stack Web Application/backend/src"
+cd "../Phase2-Full-Stack-Web-Application/backend/src"
 python -m uvicorn main:app --reload --port 8888
 ```
 

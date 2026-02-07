@@ -25,22 +25,22 @@ This isn't just another todo app. It's a **learning journey** through modern sof
 ```
 📁 Hackathon II - Todo Spec-Driven Development/
 │
-├── 📁 Phase1-In-Memory Python Console App/
+├── 📁 Phase1-In-Memory-Python-Console-App/
 │   └── A Python CLI todo app with in-memory storage
 │
-├── 📁 Phase2-Full-Stack Web Application/
+├── 📁 Phase2-Full-Stack-Web-Application/
 │   ├── backend/        # FastAPI + SQLModel + JWT
 │   └── frontend/       # Next.js + TailwindCSS
 │
-├── 📁 Phase3-AI-Powered Todo Chatbot/
+├── 📁 Phase3-AI-Powered-Todo-Chatbot/
 │   ├── mcp-server/     # FastMCP with CRUD tools
 │   └── frontend/       # Chat interface
 │
-├── 📁 Phase4-Local Kubernetes Deployment/
+├── 📁 Phase4-Local-Kubernetes-Deployment/
 │   ├── kubernetes/     # Raw K8s manifests
 │   └── helm/           # Helm charts for deployment
 │
-└── 📁 Phase5-Advanced Cloud Deployment/
+└── 📁 Phase5-Advanced-Cloud-Deployment/
     └── frontend/       # Full-featured Next.js app
                         # with Neon PostgreSQL
 ```
@@ -96,11 +96,11 @@ Time to make it a real web app! I built a REST API with FastAPI and a beautiful 
 ### How to Run:
 ```bash
 # Backend
-cd "Phase2-Full-Stack Web Application/backend/src"
+cd "Phase2-Full-Stack-Web-Application/backend/src"
 ..\venv\Scripts\python.exe -m uvicorn main:app --reload --port 8000
 
 # Frontend
-cd "Phase2-Full-Stack Web Application/frontend"
+cd "Phase2-Full-Stack-Web-Application/frontend"
 npm run dev
 ```
 

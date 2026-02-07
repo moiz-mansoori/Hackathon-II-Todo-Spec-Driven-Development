@@ -43,7 +43,7 @@ Instead of running things manually, we now have:
 ## 📂 Project Structure
 
 ```
-Phase4-Local Kubernetes Deployment/
+Phase4-Local-Kubernetes-Deployment/
 │
 ├── kubernetes/              # Raw K8s Manifests
 │   ├── deployments.yaml    # Pod configurations

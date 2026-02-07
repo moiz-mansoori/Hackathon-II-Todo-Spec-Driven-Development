@@ -90,7 +90,7 @@ npm run dev
 ## 📂 Project Structure
 
 ```
-Phase2-Full-Stack Web Application/
+Phase2-Full-Stack-Web-Application/
 │
 ├── backend/                    # FastAPI Backend
 │   ├── src/

@@ -99,7 +99,7 @@ npm run dev
 ## 📂 Project Structure
 
 ```
-Phase5-Advanced Cloud Deployment/
+Phase5-Advanced-Cloud-Deployment/
 └── frontend/
     ├── src/
     │   ├── app/

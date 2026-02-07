@@ -28,7 +28,7 @@ It's a **CLI todo manager** that stores tasks in memory. Simple? Yes. But it tau
 
 ```bash
 # Navigate to this folder
-cd "Phase1-In-Memory Python Console App"
+cd "Phase1-In-Memory-Python-Console-App"
 
 # Run with different commands
 python -m src.cli.main add "Buy groceries"
@@ -54,7 +54,7 @@ python -m src.cli.main delete 1
 ## 📂 Project Structure
 
 ```
-Phase1-In-Memory Python Console App/
+Phase1-In-Memory-Python-Console-App/
 ├── src/
 │   ├── cli/           # Command-line interface
 │   │   └── main.py    # Entry point with argparse
