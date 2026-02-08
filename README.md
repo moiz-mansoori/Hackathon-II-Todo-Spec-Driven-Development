@@ -227,11 +227,11 @@ Each phase can be accessed via branches:
 
 | Phase | GitHub URL |
 |-------|------------|
-| Phase I | `github.com/[username]/hackathon-todo/tree/phase1` |
-| Phase II | `github.com/[username]/hackathon-todo/tree/phase2` |
-| Phase III | `github.com/[username]/hackathon-todo/tree/phase3` |
-| Phase IV | `github.com/[username]/hackathon-todo/tree/phase4` |
-| Phase V | `github.com/[username]/hackathon-todo/tree/phase5` |
+| Phase I | `https://github.com/moiz-mansoori/Hackathon-II-Todo-Spec-Driven-Development/tree/phase1` |
+| Phase II | `https://github.com/moiz-mansoori/Hackathon-II-Todo-Spec-Driven-Development/tree/phase2` |
+| Phase III | `https://github.com/moiz-mansoori/Hackathon-II-Todo-Spec-Driven-Development/tree/phase3` |
+| Phase IV | `https://github.com/moiz-mansoori/Hackathon-II-Todo-Spec-Driven-Development/tree/phase4` |
+| Phase V | `https://github.com/moiz-mansoori/Hackathon-II-Todo-Spec-Driven-Development/tree/phase5` |
 
 ---
 

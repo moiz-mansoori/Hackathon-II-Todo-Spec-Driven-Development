@@ -1,11 +1,6 @@
 import { OpenAI } from 'openai';
 import { NextResponse } from 'next/server';
 
-const openai = new OpenAI({
-    apiKey: process.env.GROQ_API_KEY,
-    baseURL: 'https://api.groq.com/openai/v1',
-});
-
 const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8888/api';
 
 // Defined tools for the AI Agent
@@ -67,6 +62,12 @@ const tools: any[] = [
 ];
 
 export async function POST(req: Request) {
+    // Lazy initialize OpenAI client to avoid build-time errors if key is missing
+    const openai = new OpenAI({
+        apiKey: process.env.GROQ_API_KEY,
+        baseURL: 'https://api.groq.com/openai/v1',
+    });
+
     try {
         const { messages, auth_token } = await req.json();
 
