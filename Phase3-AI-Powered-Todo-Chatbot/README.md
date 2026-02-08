@@ -189,6 +189,16 @@ Try these with the chatbot:
 
 ---
 
+---
+
+## 📖 References & Research Papers
+
+This phase leverages cutting-edge AI research:
+- **ReAct: Synergizing Reasoning and Acting in Language Models** (Yao et al., 2022)
+- **Model Context Protocol (MCP)** for AI-tool integration.
+
+---
+
 ## 👨‍💻 Author
 
 **Moiz Ahmed Mansoori**

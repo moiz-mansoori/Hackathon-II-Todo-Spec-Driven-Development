@@ -224,6 +224,14 @@ curl http://localhost:8000/tasks \
 
 ---
 
+## 📖 References & Research Papers
+
+This phase implements concepts from:
+- **The Science of To-Do Lists** (Mark et al., 2008)
+- **Clean Architecture** (Martin, 2017)
+
+---
+
 ## 👨‍💻 Author
 
 **Moiz Ahmed Mansoori**

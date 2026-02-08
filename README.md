@@ -231,9 +231,7 @@ The final evolution! A production-ready app with all the bells and whistles.
 
 ---
 
-## 📝 How to Submit (For Hackathon)
-
-Each phase can be accessed via branches:
+### Each phase can be accessed via branches:
 
 | Phase | GitHub URL |
 |-------|------------|
@@ -261,9 +259,20 @@ This research influenced the design of task categorization and priority systems 
 > Yao, S., et al. (2022). *ReAct: Synergizing Reasoning and Acting in Language Models*. ICLR 2023.  
 > 🔗 [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
 
-The MCP server implementation draws from ReAct's approach to combining reasoning with action execution.
+> **"Attention Is All You Need"**  
+> Vaswani, A., et al. (2017). *Advances in Neural Information Processing Systems*.  
+> 🔗 [arXiv:1706.03762](https://arxiv.org/abs/1706.03762)
 
-### 3. Container Orchestration
+The implementation utilizes Llama-3 (via Groq), which is built on the foundational Transformer architecture.
+
+### 3. AI in Software Engineering
+> **"Large Language Models for Software Engineering: A Systematic Literature Review"**  
+> Hou, X., et al. (2023).  
+> 🔗 [arXiv:2308.10620](https://arxiv.org/abs/2308.10620)
+
+Guided the integration of LLMs into the development lifecycle and tool-calling interfaces.
+
+### 4. Container Orchestration
 > **"Borg, Omega, and Kubernetes: Lessons Learned from Three Container-Management Systems over a Decade"**  
 > Burns, B., Grant, B., Oppenheimer, D., Brewer, E., & Wilkes, J. (2016). *ACM Queue*.  
 > 🔗 [ACM Queue](https://queue.acm.org/detail.cfm?id=2898444)

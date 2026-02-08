@@ -119,6 +119,14 @@ This simple app evolves into something much bigger:
 
 ---
 
+## 📖 References & Research Papers
+
+This project was inspired by academic research:
+- **Clean Architecture** (Martin, 2017)
+- **The Science of To-Do Lists** (Mark et al., 2008)
+
+---
+
 ## 👨‍💻 Author
 
 **Moiz Ahmed Mansoori**

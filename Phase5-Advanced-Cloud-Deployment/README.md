@@ -208,6 +208,16 @@ vercel
 
 ---
 
+---
+
+## 📖 References & Research Papers
+
+This final phase integrates:
+- **Serverless Computing Trends** (Baldini et al., 2017)
+- **The Science of To-Do Lists** (Mark et al., 2008)
+
+---
+
 ## 👨‍💻 Author
 
 **Moiz Ahmed Mansoori**
