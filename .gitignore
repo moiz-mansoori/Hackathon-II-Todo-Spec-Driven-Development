@@ -1,5 +1,5 @@
 # Python
-__pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
 *.so
@@ -10,8 +10,8 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+/lib/
+/lib64/
 parts/
 sdist/
 var/
@@ -19,13 +19,13 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-venv/
-.venv/
-ENV/
-env/
+**/venv/
+**/.venv/
+**/ENV/
+**/env/
 
 # Node.js
-node_modules/
+**/node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -33,8 +33,8 @@ yarn-error.log*
 .npm
 
 # Next.js
-.next/
-out/
+**/.next/
+**/out/
 
 # IDE
 .vscode/
@@ -49,6 +49,7 @@ out/
 .env.development.local
 .env.test.local
 .env.production.local
+.env*
 
 # Database
 *.db
@@ -56,7 +57,7 @@ out/
 *.sqlite3
 
 # Logs
-logs/
+**/logs/
 *.log
 
 # OS
@@ -67,15 +68,18 @@ Thumbs.db
 .coverage
 htmlcov/
 .pytest_cache/
-.tox/
-.nox/
-
-# Build
-*.exe
-*.dll
+*.tsbuildinfo
 *.dylib
+
+# Project Specific
+deployment-guide.md
+deployement.txt
 
 # Misc
 *.bak
 *.tmp
 *.temp
+.tox/
+.nox/
+*.exe
+*.dll
