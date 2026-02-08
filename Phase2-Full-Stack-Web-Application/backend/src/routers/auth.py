@@ -3,9 +3,9 @@
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlmodel import Session
-from database import get_session
-from models.user import UserCreate, UserRead, UserLogin
-from services.auth_service import AuthService
+from ..database import get_session
+from ..models.user import UserCreate, UserRead, UserLogin
+from ..services.auth_service import AuthService
 
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])

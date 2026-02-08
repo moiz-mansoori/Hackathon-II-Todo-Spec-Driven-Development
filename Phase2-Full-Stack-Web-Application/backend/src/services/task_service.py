@@ -3,7 +3,7 @@
 from datetime import datetime
 from typing import Optional
 from sqlmodel import Session, select
-from models.task import Task, TaskCreate, TaskUpdate
+from ..models.task import Task, TaskCreate, TaskUpdate
 
 
 class TaskService:
