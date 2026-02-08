@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Modern Todo - Phase 2",
-  description: "Secure, fast, and beautiful task management",
+  title: "Mansoori Todo - Phase 3 AI Chatbot",
+  description: "Advanced AI-powered task management with Groq",
 };
 
 export default function RootLayout({
