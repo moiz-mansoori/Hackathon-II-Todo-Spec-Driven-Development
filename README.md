@@ -6,6 +6,16 @@ Hey there! 👋 Welcome to my hackathon project. I built a **Todo application** 
 
 ---
 
+## 🌍 Live Deployments
+
+| Phase | Deployment Link | Status |
+|-------|-----------------|--------|
+| **Phase 2** (Full-Stack) | [mansoori-todo-phase2.vercel.app](https://mansoori-todo-phase2-git-main-moiz-roshans-projects.vercel.app/) | ✅ Live |
+| **Phase 3** (AI Chatbot) | [mansoori-todo-phase3.vercel.app](https://mansoori-todo-phase3-ai-chatbot.vercel.app/) | ✅ Live |
+| **Phase 5** (Cloud-Native) | [mansoori-todo-phase5.vercel.app](https://hackathon-ii-todo-spec-driven-devel-six.vercel.app/) | ✅ Live |
+
+---
+
 ## 🎯 What's This Project About?
 
 This isn't just another todo app. It's a **learning journey** through modern software development:
