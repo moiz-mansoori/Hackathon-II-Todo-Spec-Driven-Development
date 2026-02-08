@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Mansoori Todo - Phase 3 AI Chatbot",
   description: "Advanced AI-powered task management with Groq",
-};
+}; // Force redeploy sync v2
 
 export default function RootLayout({
   children,
