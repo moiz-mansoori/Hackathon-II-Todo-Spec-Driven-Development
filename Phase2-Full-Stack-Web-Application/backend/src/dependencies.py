@@ -4,9 +4,9 @@ from typing import Annotated
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlmodel import Session
-from database import get_session
-from services.auth_service import AuthService
-from models.user import User
+from .database import get_session
+from .services.auth_service import AuthService
+from .models.user import User
 
 
 security = HTTPBearer()

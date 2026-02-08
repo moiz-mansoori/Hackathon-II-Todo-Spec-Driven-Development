@@ -3,11 +3,11 @@
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlmodel import Session
-from database import get_session
-from models.task import TaskCreate, TaskUpdate, TaskRead
-from models.user import User
-from services.task_service import TaskService
-from dependencies import get_current_user
+from ..database import get_session
+from ..models.task import TaskCreate, TaskUpdate, TaskRead
+from ..models.user import User
+from ..services.task_service import TaskService
+from ..dependencies import get_current_user
 
 
 router = APIRouter(prefix="/api/tasks", tags=["tasks"])

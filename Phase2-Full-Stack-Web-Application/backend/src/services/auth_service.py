@@ -6,8 +6,8 @@ import hashlib
 import secrets
 from jose import jwt, JWTError
 from sqlmodel import Session, select
-from models.user import User, UserCreate
-from config import get_settings
+from ..models.user import User, UserCreate
+from ..config import get_settings
 
 
 settings = get_settings()
